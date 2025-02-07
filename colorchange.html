@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Changing Colors</title>
+
+    <!#################################################################################>
+    <!-- CSS: Styling of the webpage -->
+    <style>
+        .color-text {
+            font-size: 24px; /* Sets the font size */
+            text-align: center; /* Aligns text to the center */
+            margin-top: 20px; /* Adds space on the top */
+        }
+    </style>
+</head>
+<body>
+
+    <!#################################################################################>
+    <!-- HTML: Structure of the webpage -->
+
+    <!-- Button element - when clicked, it will run the JavaScript function 'changeColors' -->
+    <button onclick="changeColors()">Click Me to Change Colors</button>
+
+    <!-- Div element where the text color will change -->
+    <div id="text1" class="color-text">Watch the colors change!</div>
+
+    <div id="text2" class="color-text">this is my second line</div>
+
+
+    <!#################################################################################>
+    <!-- JavaScript: Script to make the webpage interactive -->
+
+    <script>
+        function changeColors() {
+            // Array of colors for the text and background
+            var colors = ['red','blue', 'gold', 'purple', 'green', 'teal'];
+	    var Dcolors = ['yellow', 'black', 'silver', 'gray'];
+
+            // Getting the text element by its ID
+            var element = document.getElementById('text1');
+	    var tex = document.getElementById('text2');
+
+
+            // Picking a random color from the array for the text
+
+            var tworandomColor = Dcolors[Math.floor(Math.random() * Dcolors.length)];
+	    var randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+
+            element.style.color = randomColor; // Changing the text color
+	    tex.style.color = tworandomColor; // Changing the text color
+
+
+
+            var backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            
+            document.body.style.backgroundColor = backgroundColor; //change background color
+        }
+    </script>
+
+</body>
+</html>
